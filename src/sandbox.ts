@@ -52,8 +52,52 @@ let mixedNames: any[] = [];
 mixedNames.push("Kay");
 mixedNames.push(false);
 mixedNames.push(3);
-console.log(mixedNames);
+// console.log(mixedNames);
 
 
 let mixedObject: { name: any, age: any }
+
+
+// Functions
+
+let func: Function;
+
+func = () => {
+    // console.log("function")
+}
+
+const add = (a: number, b: number) => {
+    // console.log(a + b);
+}
+
+add(5, 10);
+
+const addOptional = (a: number, b: number, c?: string|number|boolean) => {
+    // console.log(a + b);
+    // c is optional when "?" is used  
+}
+
+addOptional(5, 15);
+
+const returnValue = (a: number, b: number) : number => {
+    return  a + b;
+};
+
+let result = returnValue(10, 25);
+
+
+// type alias
+// define the type and assign it to a variable
+type StringOrNum = string | number;
+type objWithName = { name: string, uid: StringOrNum };
+
+const greet = (uid: StringOrNum, item: string) => {
+    console.log(`${item} has a ${uid}`);
+};
+
+const greetAgain = (user: objWithName) => {
+    console.log(`${user.name} is present`);
+};
+
+
 

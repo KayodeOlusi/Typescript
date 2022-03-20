@@ -34,5 +34,29 @@ let mixedNames = [];
 mixedNames.push("Kay");
 mixedNames.push(false);
 mixedNames.push(3);
-console.log(mixedNames);
+// console.log(mixedNames);
 let mixedObject;
+// Functions
+let func;
+func = () => {
+    // console.log("function")
+};
+const add = (a, b) => {
+    // console.log(a + b);
+};
+add(5, 10);
+const addOptional = (a, b, c) => {
+    // console.log(a + b);
+    // c is optional when "?" is used  
+};
+addOptional(5, 15);
+const returnValue = (a, b) => {
+    return a + b;
+};
+let result = returnValue(10, 25);
+const greet = (uid, item) => {
+    console.log(`${item} has a ${uid}`);
+};
+const greetAgain = (user) => {
+    console.log(`${user.name} is present`);
+};
