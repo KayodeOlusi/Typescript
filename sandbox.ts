@@ -1,9 +1,23 @@
-const character = "luigi";
+// const character = "luigi";
 
-console.log(character);
+// console.log(character);
 
-const circle = (diameter: number) => {
-    return diameter * Math.PI
+// const circle = (diameter: number) => {
+//     return diameter * Math.PI
+// }
+
+// console.log(circle(7.5));
+
+// Arrays
+let names = ['luigi', 'mario', 'yoshi']
+names.push('super')
+
+// Objects
+
+let obj = {
+    name: 'mario',
+    age: 23,
+    adult: true
 }
 
-console.log(circle(7.5));
+obj.age = 50;
