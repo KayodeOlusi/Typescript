@@ -99,5 +99,30 @@ const greetAgain = (user: objWithName) => {
     console.log(`${user.name} is present`);
 };
 
+// Function Signatures
+let toGreet: (a: string, b: string) => void;
+
+toGreet = (name: string, greeting: string) => {
+    console.log(`${name} sends ${greeting}`)
+};
+
+let calc: (a: number, b: number, c: string) => number;
+
+calc = (num1: number, num2: number, action: string) => {
+    if (action === "add") {
+        return num1 + num2;
+    } else {
+        return num1 - num2;        
+    }
+}
+
+let logDetails: (obj: { name: string, age: number }) => void;
+
+type person = { name: string, age: number }
+
+logDetails = (ninja: person /*{ name: string, age: number }*/) => {
+    console.log(`${ninja.name} is ${ninja.age}`);
+}
+
 
 
