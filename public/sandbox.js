@@ -1,3 +1,4 @@
+"use strict";
 // const character = "luigi";
 // console.log(character);
 // const circle = (diameter: number) => {
@@ -15,22 +16,23 @@
 // }
 // obj.age = 50;
 // explicit types 
-var character;
-var age;
-var isFalse;
+let character;
+let age;
+let isFalse;
 // arrays
-var names = []; // define the type and set it to a defualt value
+let names = []; // define the type and set it to a defualt value
 //union types
-var mixed = []; // to use multiple types in an array
-var uid;
+let mixed = []; // to use multiple types in an array
+let uid;
 // objects
-var obj1;
-var obj2;
-var obj3;
+let obj1;
+let obj2;
+let obj3;
 // any
-var anyName; // setting the varaible to have any type
-var mixedNames = [];
+let anyName; // setting the varaible to have any type
+let mixedNames = [];
 mixedNames.push("Kay");
 mixedNames.push(false);
 mixedNames.push(3);
-var mixedObject;
+console.log(mixedNames);
+let mixedObject;

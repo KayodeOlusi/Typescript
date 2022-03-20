@@ -52,6 +52,7 @@ let mixedNames: any[] = [];
 mixedNames.push("Kay");
 mixedNames.push(false);
 mixedNames.push(3);
+console.log(mixedNames);
 
 
 let mixedObject: { name: any, age: any }
