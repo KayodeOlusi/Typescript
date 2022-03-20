@@ -2,6 +2,8 @@ const character = "luigi";
 
 console.log(character);
 
-const inputs = document.querySelectorAll("input");
+const circle = (diameter: number) => {
+    return diameter * Math.PI
+}
 
-console.log(inputs);
+console.log(circle(7.5));

@@ -1,4 +1,6 @@
 var character = "luigi";
 console.log(character);
-var inputs = document.querySelectorAll("input");
-console.log(inputs);
+var circle = function (diameter) {
+    return diameter * Math.PI;
+};
+console.log(circle(7.5));
