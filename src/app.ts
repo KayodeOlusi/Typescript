@@ -1,12 +1,12 @@
 class Invoice {
-    client: string;
-    details: string;
-    amount: number;
+    // readonly client: string;
+    // private details: string;
+    // public amount: number;
 
-    constructor(c: string, d: string, a: number) {
-        this.client = c;
-        this.details = d;
-        this.amount = a;
+    constructor(readonly client: string, private details: string, public amount: number) {
+        // this.client = c;
+        // this.details = d;
+        // this.amount = a;
     }
 
     format() {
@@ -19,15 +19,18 @@ const invTwo = new Invoice("luigi", "for bank", 50);
 
 let invoices: Invoice[] = [];
 invoices.push(invOne, invTwo);
-console.log(invoices);
+
+invoices.forEach(invoice => {
+    console.log(`${invoice.format()}`)
+})
 
 
 const anchor = document.querySelector('a')!;
-console.log(anchor.href);
+// console.log(anchor.href);
 // Use "!" for the element to not be null  
 
 const form = document.querySelector('.new-item-form') as HTMLFormElement;
-console.log(form.children);
+// console.log(form.children);
 
 const type = document.querySelector('#type') as HTMLSelectElement;
 const toFrom = document.querySelector('#tofrom') as HTMLInputElement;
