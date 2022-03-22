@@ -48,11 +48,13 @@ const list = new ListTemplate(ul);
 form.addEventListener('submit', (e) => {
     e.preventDefault();
     let doc;
+    let values;
+    values = [toFrom.value, details.value, amount.valueAsNumber];
     if (type.value === 'invoice') {
-        doc = new Invoice(toFrom.value, details.value, amount.valueAsNumber);
+        doc = new Invoice(...values);
     }
     else {
-        doc = new Payments(toFrom.value, details.value, amount.valueAsNumber);
+        doc = new Payments(...values);
     }
     list.render(doc, type.value, "end");
 });
@@ -82,3 +84,8 @@ const docFour = {
     resourceName: ResourceType.PERSON,
     data: ["Shawn"]
 };
+//tuples
+// use tuples when you want the type of values unchanged
+// only change the values to the same data type of value  
+let arr = ["Kay", "Leo", 90];
+arr[1] = "Jay";
