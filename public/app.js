@@ -57,19 +57,28 @@ form.addEventListener('submit', (e) => {
     list.render(doc, type.value, "end");
 });
 // GENERICS
-// USe generics to specify the type of value
+// Use generics to specify the type of value
 let addUID = (obj) => {
     let uid = Math.floor(Math.random() * 100);
     return Object.assign(Object.assign({}, obj), { uid });
 };
 let docOne = addUID({ name: 'yoshi', age: 40 });
+//enums
+// use enums to set default values for items or elements
+var ResourceType;
+(function (ResourceType) {
+    ResourceType[ResourceType["BOOK"] = 0] = "BOOK";
+    ResourceType[ResourceType["AUTHOR"] = 1] = "AUTHOR";
+    ResourceType[ResourceType["PERSON"] = 2] = "PERSON";
+    ResourceType[ResourceType["CAST"] = 3] = "CAST";
+})(ResourceType || (ResourceType = {}));
 const docThree = {
     uid: 1,
-    resourceName: "Kayode",
+    resourceName: ResourceType.BOOK,
     data: { name: "Leo" }
 };
 const docFour = {
     uid: 2,
-    resourceName: "May",
+    resourceName: ResourceType.PERSON,
     data: ["Shawn"]
 };

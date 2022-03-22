@@ -76,29 +76,33 @@ form.addEventListener('submit', (e) => {
 })
 
 // GENERICS
-// USe generics to specify the type of value
+// Use generics to specify the type of value
 let addUID = <T extends{ name: string }>(obj: T) => {
     let uid = Math.floor(Math.random() * 100);
     return { ...obj, uid };
-}
+};
 
 let docOne = addUID({ name: 'yoshi', age: 40 });
+
+//enums
+// use enums to set default values for items or elements
+enum ResourceType { BOOK, AUTHOR, PERSON, CAST }
 
 // with interfaces
 interface Resource<T> {
     uid: number;
-    resourceName: string;
+    resourceName: number;
     data: T;
 }
 
 const docThree: Resource<object> = {
     uid: 1,
-    resourceName: "Kayode",
+    resourceName: ResourceType.BOOK, // 0
     data: { name: "Leo" }
 }
 
 const docFour: Resource<string[]> = {
     uid: 2,
-    resourceName: "May",
+    resourceName: ResourceType.PERSON, // 2
     data: ["Shawn"]
 }
