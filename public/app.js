@@ -6,6 +6,22 @@ invoices.push(invOne, invTwo);
 invoices.forEach(invoice => {
     console.log(`${invoice.format()}`);
 });
+const me = {
+    name: "shaun",
+    age: 30,
+    speak(text) {
+        console.log(text);
+    },
+    spend(amount) {
+        console.log("I spent", amount);
+        return amount;
+    }
+};
+const greetPerson = (person) => {
+    console.log('hello', person.name);
+};
+greetPerson(me);
+//DOM
 const anchor = document.querySelector('a');
 // console.log(anchor.href);
 // Use "!" for the element to not be null  
